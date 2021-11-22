@@ -3,7 +3,6 @@ from django.forms import ModelForm, Textarea
 
 # Create your models here.
 
-
 class Pegawai(models.Model):
     YearsExperience = models.FloatField()
     Salary = models.FloatField()

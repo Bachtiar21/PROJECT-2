@@ -16,9 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from prediksi import views
+from django.conf.urls import url
+from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    url('^$', views.index, name='homepage'),
+    url('result', views.result, name='result'),
+    url('data', views.data, name='data'),
+    url('visualisasi', views.visualisasi, name='visualisasi'),
+
     path('pgw/', views.pgw),
     path('view/', views.view),
     path('delete/<int:id>', views.delete),

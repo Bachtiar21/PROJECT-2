@@ -1,0 +1,114 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Data</title>
+    <link href="https://cdn-icons-png.flaticon.com/512/609/609132.png" rel="shortcut icon">
+
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+     <link rel="stylesheet" type="text/css" href="js/bootstrap.min.js">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+
+
+    <style>
+        body{
+        background: rgb(213, 213, 231);
+        
+    }
+    </style>
+    
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container-fluid ">
+          <a class="sidebar-brand d-flex align-items-center justify-content-center bg-gray-900" href="http://127.0.0.1:8000/">
+            <div class="sidebar-brand-icon rotate-n-0">
+              <img src="https://cdn-icons-png.flaticon.com/512/609/609132.png" height="30"></img>
+            </div>
+            <div class="sidebar-brand-text mx-3 text-light"><b>Prediksi Gaji Pegawai</b></div>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-light"  aria-current="page" href="http://127.0.0.1:8000/view">Data Pegawai</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="visualisasi.html">Visualisasi</a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <br>
+<br>
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow">
+            <div class="card-header bg-dark">
+                <div class="float-left">
+                    <h4 class="h4 m-0 text-light"><b>TAMBAH DATA</b></h4>
+                </div>
+                <div class="float-right">
+                    <a href="http://127.0.0.1:8000/view/" class="btn btn-secondary btn-sm">Kembali</a>
+                  </div>
+            </div>
+           
+            <div class="card-body bg-gray-100">
+               <h4>Silahkan masukan data pegawai.</h4>
+                <hr>
+                <form action="/pgw/" id="form-tambah" method="POST">
+                    {% csrf_token %}
+                    <div class="form-row">
+                        <div class="form-group col-md-8">
+                            <label for="kode_produk"><strong>Years Experience :</strong></label>
+                          <div>{{ form.YearsExperience }}</div> 
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-8">
+                            <label for="jenis_produk"><strong>Salary : </strong></label>
+                            <div>{{ form.Salary }}</div>
+                        </div>
+                    </div>
+                    
+                    <hr>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                        <button type="reset" class="btn btn-danger">Batal</button>
+                    </div>
+                </form>
+            </div>				
+        </div>
+    </div>
+</div>
+<br>
+<br>
+
+    <footer class="bg-dark text-center text-white" style="background-color: rgba(0, 0, 0, 0.2);">
+      <!-- Grid container -->
+      <!-- <div class="container p-4 pb-0"> -->
+  
+      <!-- Copyright -->
+      <div class="bg-dark container p-4 text-center" >
+        © 2021 Copyright:
+        <a class="text-white" href="">ABACH DAN DHANTI</a>
+      </div>
+      <!-- Copyright -->
+  
+  <!-- </div> -->
+  <!-- Grid container -->
+    </footer>
+
+</body>
+</html>
