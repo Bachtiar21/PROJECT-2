@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Pegawai</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+<body>
+    <table class="table table-striped table-bordered table-sm">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Id</th> 
+            <th scope="col">YearsExperience</th>
+            <th scope="col">Salary</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        {% for pegawai in pegawai %}
+          <tr>
+            <th scope="row">{{ pegawai.id }}</th>
+            <td>{{ pegawai.YearsExperience }}</td>
+            <td>{{ pegawai.Salary }}</td>
+            <td>
+                <a href="/edit/{{ pegawai.id }}"><span class="btn btn-success">Edit</span></a>
+                <a href="/delete/{{ pegawai.id }}"><span class="btn btn-danger">Delete</span></a>
+            </td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+
+</body>
+</html>
