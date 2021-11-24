@@ -10,12 +10,58 @@
         <title>Login</title>
     </head>
     <body>
-        <h1>Create New Account</h1>
-        <form method="POST">
-            {% csrf_token %}
-            {{form.as_p}}
-            <button>Login</button>
-        </form>
+             
+        <div class="container">
+            <!-- Outer Row -->
+            <div class="row justify-content-center">
+    
+                <div class="col-sm-12 col-md-9">
+    
+                    <div class="card o-hidden border-0 shadow-lg my-5 bg-dark">
+                        <div class="card-body p-0">
+                            <!-- Nested Row within Card Body -->
+                            <div class="row">
+                                <div class="col-lg-12">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="p-5">
+                                        <div class="text-center">
+                         <div class="sidebar-brand-icon">
+                            <i class="fas fa-warehouse"></i>
+                              </div> 
+                                  <h1 class="h4 text-light mb-4"><b>SELAMAT DATANG !</b></h1>
+                                    <div class="sidebar-brand-text mx-3 text-light"> Silahkan inputkan username dan password </div>
+                                         <br>	
+                                      </div>
+                                      <form class="text-light" method="POST">
+                                        {% csrf_token %}
+                                        {{form.as_p}}
+                                        <button>Login</button>
+                                    </form>
+                                        <!-- <form class="user" method="POST" action="result">
+                                         <div class="form-group">
+                                            {% csrf_token %}
+                                            {{form.as_p}}
+                                            <button>Login</button>
+                                            <input type="float" name="tahun" id="tahun" class="form-control"  placeholder="Inputkan Tahun" autocomplete="off" required >
+                                            </div>
+                                            <div class="form-row">
+                                         <div class="form-group col-md-12">
+                                            <input type="submit" value="Lakukan Prediksi" class="btn btn-block bg-success text-light">
+                                            </div>
+                                        </div>
+                                        </form> -->
+                                        <br>
+                                    </div>
+                                </div>							
+                            </div>      
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
     </html>
 {% endblock %}

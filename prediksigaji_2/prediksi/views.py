@@ -7,8 +7,6 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
-
-
 def index(request):
     context = {'a': 1}
     return render(request, 'index.html', context)
@@ -25,6 +23,10 @@ def result(request):
 
     return render(request, 'result.html', {'result': result})
 
+
+def predict(request):
+    context={'a':1}
+    return render(request, 'predict.html', context)
 
 def data(request):
     return render(request, 'data.html')

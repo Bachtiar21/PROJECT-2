@@ -25,6 +25,8 @@ urlpatterns = [
     url('result', views.result, name='result'),
     url('data', views.data, name='data'),
     url('visualisasi', views.visualisasi, name='visualisasi'),
+    url('predict', views.predict, name='predict'),
+
 
     path('prediksi/', include('prediksi.urls')),
 
