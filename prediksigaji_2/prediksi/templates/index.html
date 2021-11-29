@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 
     <title>Prediksi Gaji || DASHBOARD </title>
-    <link href="https://cdn-icons-png.flaticon.com/512/609/609132.png" rel="shortcut icon">
+    <link href="{% static 'presentation.png' %}" rel="shortcut icon">
 
 <style>
     body{
@@ -30,7 +30,7 @@
     <div class="container-fluid ">
       <a class="sidebar-brand d-flex align-items-center justify-content-center bg-gray-900" href="http://127.0.0.1:8000/ ">
         <div class="sidebar-brand-icon rotate-n-0">
-          <img src="https://cdn-icons-png.flaticon.com/512/609/609132.png" height="30"></img>
+          <img src="{% static 'presentation.png' %}" height="30"></img>
         </div>
         <div class="sidebar-brand-text mx-3 text-light"><b>Prediksi Gaji Pegawai</b></div>
       </a>
@@ -40,6 +40,9 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
+            <a class="nav-link active text-light"  aria-current="page" href="http://127.0.0.1:8000/prediksi/login/">Login</a>
+          </li>
+          <!-- <li class="nav-item">
             <a class="nav-link active text-light"  aria-current="page" href="predict.html">Prediksi</a>
           </li>
           <li class="nav-item">
@@ -47,7 +50,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link text-light" href="visualisasi.html">Visualisasi</a>
-          </li>
+          </li> -->
           
         </ul>
       </div>
@@ -81,6 +84,8 @@
        <span class="sr-only">Next</span>
      </a>
    </div>
+
+   
   
   
       <!-- Optional JavaScript -->

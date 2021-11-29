@@ -39,6 +39,14 @@
                                         {% csrf_token %}
                                         {{form.as_p}}
                                         <button>Login</button>
+                                        <br>
+                                        <div align="center" class="sidebar-brand-text mx-3 text-light"> Belum memiliki akun? Silahkan daftar. </div>
+                                        <div align="center" >
+                                            <a href="http://127.0.0.1:8000/prediksi/register/" class="text-info">Mendaftar!</a>
+                                          </div>
+                                          <div class="float-right" >
+                                            <a href="http://127.0.0.1:8000" class="btn btn-secondary btn-sm">Kembali</a>
+                                          </div>
                                     </form>
                                         <!-- <form class="user" method="POST" action="result">
                                          <div class="form-group">
@@ -53,7 +61,7 @@
                                             </div>
                                         </div>
                                         </form> -->
-                                        <br>
+
                                     </div>
                                 </div>							
                             </div>      
