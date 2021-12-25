@@ -1,0 +1,11 @@
+Bahan buat Solusi R2 jelek :
+Apa Yang Harus Dilakukan Ketika R2  Adjusted Negatif?
+R2  Adjusted yang bernilai negatif merupakan indikasi bahwa persamaan regresi yang dihasilkan jelek (poor) dan tidak dapat digunakan untuk kepentingan analisis. Biasanya, ketika R2  Adjusted bernilai negatif semua variabel penjelas juga tidak signifikan secara statistik. Terus apa yang harus dilakukan jika hal ini terjadi? Berikut adalah beberapa tips yang dapat dilakukan:
+
+Menambah jumlah observasi. Untuk regresi dengan data panel, penambahan sebaiknya   dilakukan  terhadap jumlah cross-section bukan periode waktu, karena semakin banyak periode waktu yang digunakan (lebih besar dari 4) biasanya akan terjadi serial correlation pada residual. Selain itu, kita akan terjebak pada situasi apakah akan menggunakan panel unit root atau tidak.
+Mengganti variabel penjelas yang tidak signfikan dengan variabel penjelas baru yang signifikan (kerangka teori harus diperhatikan jika model adalah struktural).
+Melakukan transformasi double log.
+
+Sumber : http://www.julfahmisalim.com/2014/04/transformasi-data-ke-dalam-bentuk-log.html
+
+Bahan lain : https://medium.com/easyread/membuat-proyek-machine-learning-dengan-python-part-1-8e8a03095636
