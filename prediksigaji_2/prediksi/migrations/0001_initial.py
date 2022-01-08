@@ -15,8 +15,11 @@ class Migration(migrations.Migration):
             name='Pegawai',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('YearsExperience', models.FloatField()),
-                ('Salary', models.FloatField()),
+                ('Age', models.FloatField()),
+                ('JobLevel', models.IntegerField()),
+                ('MonthlyIncome', models.IntegerField()),
+                ('TotalWorkingYears', models.IntegerField()),
+                ('YearsAtCompany', models.IntegerField()),
             ],
         ),
     ]

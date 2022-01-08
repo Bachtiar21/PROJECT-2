@@ -4,8 +4,11 @@ from django.forms import ModelForm, Textarea
 # Create your models here.
 
 class Pegawai(models.Model):
-    YearsExperience = models.FloatField()
-    Salary = models.FloatField()
+    Age = models.FloatField()
+    JobLevel = models.IntegerField()
+    MonthlyIncome = models.IntegerField()
+    TotalWorkingYears = models.IntegerField()
+    YearsAtCompany = models.IntegerField()
 
 
 class Meta:

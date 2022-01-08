@@ -16,10 +16,13 @@ def index(request):
 
 def result(request):
     print(request)
-    tahun = float(request.POST.get('tahun'))
+    Age = float(request.POST.get('Age'))
+    JobLevel = int(request.POST.get('JobLevel'))
+    TotalWorkingYears = int(request.POST.get('TotalWorkingYears'))
+    YearsAtCompany = int(request.POST.get('YearsAtCompany'))
 
     model = pd.read_pickle('./models/model3.pickle')
-    result = model.predict([[tahun]])
+    result = model.predict([[Age,JobLevel,TotalWorkingYears,YearsAtCompany]])
 
     return render(request, 'result.html', {'result': result})
 

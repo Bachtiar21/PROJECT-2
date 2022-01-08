@@ -75,17 +75,41 @@
                     {% csrf_token %}
                     <div class="form-row">
                         <div class="form-group col-md-8">
-                            <label for="kode_produk"><strong>Years Experience :</strong></label>
+                            <label for="kode_produk"><strong>Age :</strong></label>
                             <div>
-                            <input type="number" class="form-control" name="YearsExperience" value="{{ pegawai.YearsExperience }}">
+                            <input type="number" class="form-control" name="Age" value="{{ pegawai.Age }}">
                             </div>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-8">
-                            <label for="jenis_produk"><strong>Salary : </strong></label>
+                            <label for="jenis_produk"><strong>Job Level : </strong></label>
                             <div>
-                            <input  type="number" class="form-control"  name="Salary" value="{{ pegawai.Salary }}">
+                            <input  type="number" class="form-control"  name="JobLevel" value="{{ pegawai.JobLevel }}">
+                           </div>
+                        </div>
+                    </div>
+                     <div class="form-row">
+                        <div class="form-group col-md-8">
+                            <label for="jenis_produk"><strong>Monthly Income : </strong></label>
+                            <div>
+                            <input  type="number" class="form-control"  name="MonthlyIncome" value="{{ pegawai.MonthlyIncome }}">
+                           </div>
+                        </div>
+                    </div>
+                     <div class="form-row">
+                        <div class="form-group col-md-8">
+                            <label for="jenis_produk"><strong>Total Working Years : </strong></label>
+                            <div>
+                            <input  type="number" class="form-control"  name="TotalWorkingYears" value="{{ pegawai.TotalWorkingYears }}">
+                           </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-8">
+                            <label for="jenis_produk"><strong>Years At Company : </strong></label>
+                            <div>
+                            <input  type="number" class="form-control"  name="YearsAtCompany" value="{{ pegawai.YearsAtCompany }}">
                            </div>
                         </div>
                     </div>

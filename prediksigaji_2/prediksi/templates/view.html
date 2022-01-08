@@ -88,16 +88,21 @@
   <thead class="thead-dark">
     <tr>
       <th scope="col">Id</th> 
-      <th scope="col">YearsExperience</th>
-      <th scope="col">Salary</th>
-      <th scope="col">Actions</th>
+      <th scope="col">Age</th>
+      <th scope="col">JobLevel</th>
+      <th scope="col">MonthlyIncome</th>
+      <th scope="col">TotalWorkingYears</th>
+      <th scope="col">YearsAtCompany</th>
     </tr>
   </thead>
   {% for pegawai in pegawai %}
     <tr>
       <th scope="row">{{ pegawai.id }}</th>
-      <td>{{ pegawai.YearsExperience }}</td>
-      <td>{{ pegawai.Salary }}</td>
+      <td>{{ pegawai.Age }}</td>
+      <td>{{ pegawai.JobLevel }}</td>
+      <td>{{ pegawai.MonthlyIncome }}</td>
+      <td>{{ pegawai.TotalWorkingYears }}</td>
+      <td>{{ pegawai.YearsAtCompany }}</td>
       <td>
           <a href="/edit/{{ pegawai.id }}"><span class="btn btn-success">Edit</span></a>
           <a href="/delete/{{ pegawai.id }}"><span class="btn btn-danger">Delete</span></a>
