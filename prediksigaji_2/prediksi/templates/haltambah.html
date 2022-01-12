@@ -66,49 +66,51 @@
                     <a href="http://127.0.0.1:8000/view/" class="btn btn-secondary btn-sm">Kembali</a>
                   </div>
             </div>
-           
             <div class="card-body bg-gray-100">
                <h4>Silahkan masukan data pegawai.</h4>
                 <hr>
                 <form action="/pgw/" id="form-tambah" method="POST">
-                    {% csrf_token %}
-                    <div class="form-row">
-                        <div class="form-group col-md-8">
+                  {% csrf_token %}
+                <div class="float-left">
+                   <div class="form-row">
+                        <div class="form-group col-md-6">
                             <label for=" "><strong>Age :</strong></label>
                           <div>{{ form.Age }}</div> 
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="form-group col-md-8">
+                        <div class="form-group col-md-6">
                             <label for=" "><strong>Job Level : </strong></label>
                             <div>{{ form.JobLevel }}</div>
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="form-group col-md-8">
+                        <div class="form-group col-md-13">
                             <label for=" "><strong>Monthly Income : </strong></label>
                             <div>{{ form.MonthlyIncome }}</div>
                         </div>
                     </div>
+                </div>
+                <div class="float-right">
                     <div class="form-row">
-                        <div class="form-group col-md-8">
+                        <div class="form-group col-md-12">
                             <label for=" "><strong>Total Working Years : </strong></label>
                             <div>{{ form.TotalWorkingYears }}</div>
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="form-group col-md-8">
+                        <div class="form-group col-md-12">
                             <label for=" "><strong>Years At Company : </strong></label>
                             <div>{{ form.YearsAtCompany }}</div>
                         </div>
                     </div>
-                    
                     <hr>
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary">Simpan</button>
                         <button type="reset" class="btn btn-danger">Batal</button>
                     </div>
-                </form>
+                  </div>
+            </form>
             </div>				
         </div>
     </div>

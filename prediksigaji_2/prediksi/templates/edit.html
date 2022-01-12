@@ -73,8 +73,9 @@
                 <form action="/update/{{pegawai.id}}" class="post-form" method="POST">
                     <input type="hidden" name="id" id="id" required maxlength="20" value="{{ pegawai.id }}"/>
                     {% csrf_token %}
+                <div class="float-left">
                     <div class="form-row">
-                        <div class="form-group col-md-8">
+                        <div class="form-group col-md-15">
                             <label for="kode_produk"><strong>Age :</strong></label>
                             <div>
                             <input type="number" class="form-control" name="Age" value="{{ pegawai.Age }}">
@@ -82,7 +83,7 @@
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="form-group col-md-8">
+                        <div class="form-group col-md-15">
                             <label for="jenis_produk"><strong>Job Level : </strong></label>
                             <div>
                             <input  type="number" class="form-control"  name="JobLevel" value="{{ pegawai.JobLevel }}">
@@ -90,15 +91,17 @@
                         </div>
                     </div>
                      <div class="form-row">
-                        <div class="form-group col-md-8">
+                        <div class="form-group col-md-15">
                             <label for="jenis_produk"><strong>Monthly Income : </strong></label>
                             <div>
                             <input  type="number" class="form-control"  name="MonthlyIncome" value="{{ pegawai.MonthlyIncome }}">
                            </div>
                         </div>
                     </div>
-                     <div class="form-row">
-                        <div class="form-group col-md-8">
+                </div>
+                <div class="float-right">
+                    <div class="form-row">
+                        <div class="form-group col-md-15">
                             <label for="jenis_produk"><strong>Total Working Years : </strong></label>
                             <div>
                             <input  type="number" class="form-control"  name="TotalWorkingYears" value="{{ pegawai.TotalWorkingYears }}">
@@ -106,18 +109,19 @@
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="form-group col-md-8">
+                        <div class="form-group col-md-15">
                             <label for="jenis_produk"><strong>Years At Company : </strong></label>
                             <div>
                             <input  type="number" class="form-control"  name="YearsAtCompany" value="{{ pegawai.YearsAtCompany }}">
                            </div>
                         </div>
                     </div>
-                    
                     <hr>
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary">Simpan</button>
+                        <button type="reset" class="btn btn-danger">Batal</button>
                     </div>
+                  </div>
                 </form>
             </div>				
         </div>
