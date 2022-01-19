@@ -48,7 +48,11 @@
           <li class="nav-item">
             <a class="nav-link text-light" href="visualisasi.html">Visualisasi</a>
           </li>
-          
+          {% if user.is_authenticated %}
+             <li class="nav-item">
+            <a class="nav-link text-light float-right" href="{% url 'logout' %}">Logout</a>
+          </li>
+          {% endif %}
         </ul>
       </div>
     </div>
